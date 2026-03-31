@@ -1,11 +1,4 @@
+# 这是你的原始配置，保持不变
 tun:
   loopback-address:
-    - 10.7.0.1  # 保持不变
-  auto-route: true
-  auto-detect-interface: true
-
-# 放行 sidestore-vpn 流量
-rules:
-  - IP-CIDR,10.6.0.1/32,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - MATCH,PROXY
+    - 10.7.0.1
