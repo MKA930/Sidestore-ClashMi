@@ -1,29 +1,11 @@
 tun:
-  enable: true
-  stack: system
   loopback-address:
-    - 10.6.0.1
-  auto-route: false  # 关闭自动路由，手动加更稳
+    - 10.7.0.1  # 保持不变
+  auto-route: true
   auto-detect-interface: true
-  # 强制指定 TUN 设备名，避免冲突
-  device: utun10
 
-# 关键：手动添加高优先级路由（覆盖直连）
-route:
-  - IP-CIDR: 10.6.0.1/32
-    via: 10.6.0.1
-    dev: utun10
-    metric: 0  # 优先级最高（0最高，越大越低）
-
-dns:
-  enable: true
-  listen: 10.6.0.1:53
-  nameserver: [223.5.5.5, 223.6.6.6]
-  fake-ip-range: 198.18.0.1/16
-  enhanced-mode: fake-ip
-
+# 放行 sidestore-vpn 流量
 rules:
+  - IP-CIDR,10.6.0.1/32,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
   - MATCH,PROXY
