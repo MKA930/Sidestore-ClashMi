@@ -78,3 +78,7 @@ PS: 如果提示 `The data couldn’t be read because it isn’t in the correct 
 ## [飞鸟云](https://feiniaoyun.xyz/#/register?code=fN1oJEmp)
 [注册链接](https://feiniaoyun.xyz/#/register?code=fN1oJEmp)
 短评：价格便宜，节点比较多。可选传家宝套餐24/年(100G流量每月重置)，也可选择10元200G不限时长套餐。官网和订阅链接经常需要挂梯子才能访问。
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
